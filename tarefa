@@ -1,4 +1,36 @@
-! Estoque restante de {nomeproduto}: {estoque[nomeproduto]}")
+nome = input("Digite o nome de usuário: ")
+if nome in list:
+    print(f"Telefone do usuário {nome} é: {list[nome]}")
+else:
+    print("Usuário não encontrado.")
+'''
+
+'''exercicio 99:
+digite = input("Digite alguma frase: ")
+
+pala = digite.lower().split()
+cont = {}
+for palavra in pala:
+    if palavra in cont:
+        cont[palavra] += 1
+    else:
+        cont[palavra] = 1
+print(cont)
+'''
+
+'''exercicio 100:
+estoque = {
+    "arroz": 10,
+    "feijão": 5,
+    "macarrão": 8
+}
+nomeproduto = input("Digite o nome do produto: ")
+quant = int(input("Digite a quantidade a ser vendida: "))
+
+if nomeproduto in estoque:
+    if quant <= estoque[nomeproduto]:
+        estoque[nomeproduto] -= quant
+        print(f"Venda realizada! Estoque restante de {nomeproduto}: {estoque[nomeproduto]}")
     else:
         print("Quantidade solicitada não disponível em estoque.")
 else:
